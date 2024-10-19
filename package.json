@@ -1,0 +1,24 @@
+{
+  "name": "systeminformation-rest-api",
+  "version": "1.0.0",
+  "description": "This package creates a simple HTTP server which returns system information using the systeminformation library.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunny9577/systeminformation-rest-api.git"
+  },
+  "author": "Sunny Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunny9577/systeminformation-rest-api/issues"
+  },
+  "homepage": "https://github.com/sunny9577/systeminformation-rest-api#readme",
+  "dependencies": {
+    "systeminformation": "^5.23.5"
+  },
+  "type": "module"
+}
