@@ -16,5 +16,5 @@ COPY . .
 # Expose the port on which the Node.js application will run
 EXPOSE 8089
 
-# Command to start the Node.js application
+# Command to start the Node.js server application
 CMD ["node", "server.js"]
