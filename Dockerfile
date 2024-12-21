@@ -1,19 +1,20 @@
-FROM node:10-alpine
+# Use an official Node.js image as the base image
+FROM node:23-alpine
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+# Set the working directory in the container
+WORKDIR /app
 
-WORKDIR /home/node/app
-
+# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-USER node
-
+# Install npm dependencies
 RUN npm install
 
-RUN npm install systeminformation
+# Copy the rest of the application code to the working directory
+COPY . .
 
-COPY --chown=node:node . .
+# Expose the port on which the Node.js application will run
+EXPOSE 8089
 
-EXPOSE 8098
-
-CMD [ "node", "server.js" ]
+# Command to start the Node.js application
+CMD ["node", "server.js"]
